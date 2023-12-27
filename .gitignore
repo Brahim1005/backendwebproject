@@ -17,7 +17,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-public/admin/gulp-tasks
 public/admin/node_modules
-public/admin/pages
 public/admin/partials
