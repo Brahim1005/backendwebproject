@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                 <a href="/">
-                    <img width="74" src="{{asset('/logo/mademoiselle.jpg')}}">
+                    <!-- <img width="74" src="{{asset('/logo/mademoiselle.jpg')}}"> -->
                 </a>
                 </div>
 

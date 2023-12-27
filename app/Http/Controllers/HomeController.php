@@ -24,6 +24,15 @@ class HomeController extends Controller
 
     public function home()
     {
-        return view('user.home');
+
+        if (Auth::id()) 
+        {
+            return redirect('homeadmin');
+        }
+
+        else 
+        {
+            return view('user.home');        
+        }
     }
 }
