@@ -8,7 +8,7 @@ use App\Models\User;
 
 class HomeController extends Controller
 {
-    public function home()
+    public function homeadmin()
     {
         $usertype=Auth::user()->usertype;
 
@@ -20,5 +20,10 @@ class HomeController extends Controller
         {
             return view('dashboard');
         }
+    }
+
+    public function home()
+    {
+        return view('user.home');
     }
 }

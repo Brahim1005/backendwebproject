@@ -28,4 +28,6 @@ Route::middleware([
     })->name('dashboard');
 });
 
+route::get('/homeadmin', [HomeController::class, 'homeadmin']);
+
 route::get('/home', [HomeController::class, 'home']);
