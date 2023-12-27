@@ -1,3 +1,18 @@
-<x-app-layout>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @include('admin.css')
+  </head>
+  <body>
 
-</x-app-layout>
+    @include('admin.sidebar')
+
+    @include('admin.navbar')
+    
+    @include('admin.body')
+
+    @include('admin.script')
+
+
+  </body>
+</html>
