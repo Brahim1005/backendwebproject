@@ -30,36 +30,46 @@
             
             <h1 class="title">Add product</h1>
 
-            <div style="padding:15px;">
-                <label for="">Product name</label>
-                <input type="text" name="name" placeholder="Give a product name" required="">
+            @if(session()->has('message'))
+            <div class="alert alert-success">
+
+            <button type="button" class="close" data-dismiss="alert">x</button>
+
+            {{session()->get('message')}}
+
             </div>
+            @endif
 
             <form action="{{url('uploadproduct')}}" method="post" enctype="multipart/form-data">
 
-                @csrf
+            @csrf
+
+            <div style="padding:15px;">
+                <label for="">Product name</label>
+                <input style="color:black;" type="text" name="title" placeholder="Give a product name" required="">
+            </div>
 
             <div style="padding:15px;">
                 <label for="">Price</label>
-                <input type="number" name="price" placeholder="Give a pprice" required="">
+                <input style="color:black;" type="number" name="price" placeholder="Give a price" required="">
             </div>
 
             <div style="padding:15px;">
                 <label for="">Description</label>
-                <input type="text" name="description" placeholder="Give a description" required="">
+                <input style="color:black;" type="text" name="description" placeholder="Give a description" required="">
             </div>
 
             <div style="padding:15px;">
                 <label for="">Quantity</label>
-                <input type="text" name="quantity" placeholder="Product quantity" required="">
+                <input style="color:black;" type="text" name="quantity" placeholder="Product quantity" required="">
             </div>
 
             <div style="padding:15px;">
-                <input type="file" name="file">
+                <input style="color:black;" type="file" name="file">
             </div>
 
             <div style="padding:15px;">
-                <input class="btn btn-success" type="submit">
+                <input style="color:black;" class="btn btn-success" type="submit">
             </div>
             </form>
             
