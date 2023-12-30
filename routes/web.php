@@ -26,6 +26,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
+
 route::get('/homeadmin', [HomeController::class, 'homeadmin']);
 
 route::get('/', [HomeController::class, 'home']);
