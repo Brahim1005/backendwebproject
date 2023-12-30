@@ -19,7 +19,7 @@ class HomeController extends Controller
         }
         else
         {
-            $data = Product::all();
+            $data = Product::paginate(6);
 
             return view('user.home',compact('data')); 
         }
@@ -36,7 +36,7 @@ class HomeController extends Controller
         else 
         {
 
-            $data = Product::all();
+            $data = Product::paginate(6);
 
             return view('user.home',compact('data'));        
         }
