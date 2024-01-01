@@ -59,6 +59,21 @@
             <x-input-error for="name" class="mt-2" />
         </div>
 
+        <!-- Birthday -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="birthday" value="{{ __('Birthday') }}" />
+            <x-input id="birthday" type="date" class="mt-1 block w-full" wire:model="state.birthday" required autocomplete="bday" />
+            <x-input-error for="birthday" class="mt-2" />
+        </div>
+
+        <!-- About Me -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="bio" value="{{ __('About Me') }}" />
+            <textarea id="bio" class="mt-1 block w-full" wire:model="state.bio" required></textarea>
+            <x-input-error for="bio" class="mt-2" />
+        </div>
+
+
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
             <x-label for="email" value="{{ __('Email') }}" />
@@ -82,7 +97,6 @@
             @endif
         </div>
     </x-slot>
-
     <x-slot name="actions">
         <x-action-message class="me-3" on="saved">
             {{ __('Saved.') }}
