@@ -44,6 +44,6 @@ class AdminController extends Controller
     {
         $data=Product::find($id);
         $data->delete();
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Product deleted succesfully');
     }
 }

@@ -12,6 +12,16 @@
     <div style="padding-bottom: 50px;" class="container-fluid page-body-wrapper">
         <div class="container" align="center">
 
+        @if(session()->has('message'))
+            <div class="alert alert-success">
+
+            <button type="button" class="close" data-dismiss="alert"></button>
+
+            {{session()->get('message')}}
+
+            </div>
+        @endif
+
         <table>
         
         <tr style="background-color: #4C4C4D;">
