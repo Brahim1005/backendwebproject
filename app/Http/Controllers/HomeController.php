@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Product;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class HomeController extends Controller
 {
@@ -40,5 +41,20 @@ class HomeController extends Controller
 
             return view('user.home',compact('data'));        
         }
+    }
+
+    public function search(Request $request)
+    {
+        $search=$request->search;
+
+        if ($search=='') {
+            $data = Product::paginate(6);
+            return view('user.home',compact('data'));   
+        }
+
+        $data=Product::where('title', 'Like', '%'.$search.'%')->get();
+
+        return view('user.home', compact('data'));
+
     }
 }

@@ -118,13 +118,13 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>About Sixteen Clothing</h2>
+              <h2>About Mademoiselle</h2>
             </div>
           </div>
           <div class="col-md-6">
             <div class="left-content">
               <h4>Looking for the best products?</h4>
-              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This template</a> is free to use for your business websites. However, you have no permission to redistribute the downloadable ZIP file on any template collection website. <a rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
+              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent"></a>Welcome to 'Mademoiselle' where style meets sophistication.<a rel="nofollow" href="contact.html"> Contact us</a> for more info.</p>
               <ul class="featured-list">
                 <li><a href="#">Lorem ipsum dolor sit amet</a></li>
                 <li><a href="#">Consectetur an adipisicing elit</a></li>
@@ -152,8 +152,7 @@ https://templatemo.com/tm-546-sixteen-clothing
             <div class="inner-content">
               <div class="row">
                 <div class="col-md-8">
-                  <h4>Creative &amp; Unique <em>Sixteen</em> Products</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>
+                  <h4>Creative &amp; Unique <em>Mademoiselle</em> Products</h4>
                 </div>
                 <div class="col-md-4">
                   <a href="#" class="filled-button">Purchase Now</a>
@@ -171,7 +170,7 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="row">
           <div class="col-md-12">
             <div class="inner-content">
-              <p>Copyright &copy; 2020 Sixteen Clothing Co., Ltd.
+              <p>Copyright &copy; 2024 Mademoiselle, Ltd.
             
             - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
             </div>
