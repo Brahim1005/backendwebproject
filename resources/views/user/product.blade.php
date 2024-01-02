@@ -11,7 +11,7 @@
               @csrf
 
               <input class="form-control" type="search" name="search" placeholder="Search product">
-              <input class="btn btn-success" type="submit" value="Search">
+              <input style="background-color: #78CA68;" class="btn btn-success" type="submit" value="Search">
 
               </form>
 
@@ -33,7 +33,7 @@
                 @csrf
                 <input type="number" value="1" min="1" class="form-control" style="width: 100px;" name="quantity">
                 <br>
-                <input class="btn btn-primary" type="submit" value="Add Cart">
+                <input style="background-color: #4090F5;" class="btn btn-primary" type="submit" value="Add Cart">
 
                 </form>
 

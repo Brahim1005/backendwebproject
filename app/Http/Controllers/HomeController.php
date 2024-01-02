@@ -23,7 +23,12 @@ class HomeController extends Controller
         {
             $data = Product::paginate(6);
 
-            return view('user.home',compact('data')); 
+            $user=auth()->user();
+
+            // Phone gebruikt om te tellen en niet op naam, omdat namen dezelfde kunnen zijn
+            $count=cart::where('phone',$user->phone)->count();
+
+            return view('user.home',compact('data', 'count')); 
         }
     }
 
@@ -79,11 +84,31 @@ class HomeController extends Controller
             $cart->save();
 
 
-            return redirect()->back();
+            return redirect()->back()->with('message', 'Product added succesfully');
         }
         else 
         {
             return redirect('login');
         }
+    }
+
+    public function showcart()
+    {
+
+        $user=auth()->user();
+
+        $cart=cart::where('phone', $user->phone)->get();
+
+        $count=cart::where('phone',$user->phone)->count();
+
+        return view('user.showcart', compact('count', 'cart'));
+    }
+
+    public function deletecart($id)
+    {
+        $data=cart::find($id);
+        $data->delete();
+
+        return redirect()->back()->with('message', 'Product removed succesfully');;;
     }
 }
