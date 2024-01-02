@@ -4,7 +4,17 @@
           <div class="col-md-12">
             <div class="section-heading">
               <h2>Latest Products</h2>
-              <a href="products.html">view all products <i class="fa fa-angle-right"></i></a>
+              <a href="/">view all products <i class="fa fa-angle-right"></i></a>
+
+              <form action="{{url('search')}}" method="get" class="form-inline" style="float: right; padding: 10px;">
+
+              @csrf
+
+              <input class="form-control" type="search" name="search" placeholder="Search product">
+              <input style="background-color: #78CA68;" class="btn btn-success" type="submit" value="Search">
+
+              </form>
+
             </div>
           </div>
 
@@ -17,6 +27,16 @@
                 <a href="#"><h4>{{$product->title}}</h4></a>
                 <h6>€{{$product->price}}</h6>
                 <p>{{$product->description}}</p>
+
+                <form action="{{url('addcart', $product->id)}}" method="POST">
+
+                @csrf
+                <input type="number" value="1" min="1" class="form-control" style="width: 100px;" name="quantity">
+                <br>
+                <input style="background-color: #4090F5;" class="btn btn-primary" type="submit" value="Add Cart">
+
+                </form>
+
               </div>
             </div>
           </div>
@@ -24,11 +44,13 @@
 
         @endforeach
 
+        @if(method_exists($data, 'links'))
         <div class="d-flex justify-content-center">
 
         {!! $data->links() !!}
 
         </div>
+        @endif
 
         </div>
       </div>
