@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Cart;
 use App\Models\Product;
 use Symfony\Contracts\Service\Attribute\Required;
 
@@ -47,7 +48,8 @@ class HomeController extends Controller
     {
         $search=$request->search;
 
-        if ($search=='') {
+        if ($search=='') 
+        {
             $data = Product::paginate(6);
             return view('user.home',compact('data'));   
         }
@@ -56,5 +58,32 @@ class HomeController extends Controller
 
         return view('user.home', compact('data'));
 
+    }
+
+    public function addcart(Request $request, $id)
+    {
+        if (Auth::id()) 
+        {
+            $user=auth()->user();
+            $product=product::find($id);
+
+            $cart=new Cart;
+
+            $cart->name=$user->name;
+            $cart->phone=$user->phone;
+            $cart->address=$user->address;
+            $cart->product_title=$product->title;
+            $cart->price=$product->price;
+            $cart->quantity=$request->quantity;
+            
+            $cart->save();
+
+
+            return redirect()->back();
+        }
+        else 
+        {
+            return redirect('login');
+        }
     }
 }
