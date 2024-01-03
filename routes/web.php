@@ -52,3 +52,7 @@ route::get('/showcart', [HomeController::class, 'showcart']);
 route::get('/delete/{id}', [HomeController::class, 'deletecart']);
 
 route::post('/order', [HomeController::class, 'confirmorder']);
+
+route::get('/showorder', [AdminController::class, 'showorder']);
+
+route::get('/updatestatus/{id}', [AdminController::class, 'updatestatus']);

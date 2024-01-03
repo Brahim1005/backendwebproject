@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Symfony\Contracts\Service\Attribute\Required;
@@ -75,5 +76,23 @@ class AdminController extends Controller
 
         return redirect()->back()->with('message', 'Product updated succesfully');
 
+    }
+
+    public function showorder()
+    {
+
+        $order=order::all();
+        return view('admin.showorder', compact('order'));
+    }
+
+    public function updatestatus($id)
+    {
+        $order=order::find($id);
+        
+        $order->status='delivered';
+        
+        $order->save();
+
+        return redirect()->back();
     }
 }
