@@ -6,12 +6,28 @@ use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Symfony\Contracts\Service\Attribute\Required;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
     public function product()
-    {
-        return view('admin.product');
+    {        
+        if (auth::id()) 
+        {
+            if (auth::user()->usertype=='1') 
+            {
+                return view('admin.product');
+            }
+            else
+            {
+                return redirect()->back();
+
+            }
+        }
+        else 
+        {
+            return redirect('login');
+        }
     }
 
     public function uploadproduct(Request $request)

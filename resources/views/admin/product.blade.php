@@ -65,11 +65,11 @@
             </div>
 
             <div style="padding:15px;">
-                <input style="color:black;" type="file" name="file">
+                <input style="color:white;" type="file" name="file">
             </div>
 
             <div style="padding:15px;">
-                <input style="color:black;" class="btn btn-success" type="submit">
+                <input style="background-color: #78CA68; color:black" class="btn btn-success" type="submit">
             </div>
             </form>
             
