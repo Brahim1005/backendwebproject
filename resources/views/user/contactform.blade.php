@@ -9,9 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-
-    <title>Mademoiselle Home Page</title>
+    <title>Contact Page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -52,7 +50,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="/">Home
                   <span class="sr-only">(current)</span>
                 </a>
@@ -63,7 +61,7 @@ https://templatemo.com/tm-546-sixteen-clothing
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About Us</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="{{url('contactform')}}">Contact Us</a>
               </li>
               <li class="nav-item">              
@@ -95,84 +93,113 @@ https://templatemo.com/tm-546-sixteen-clothing
           {{session()->get('message')}}
         </div>
       @endif
-
     </header>
 
     <!-- Page Content -->
-    <!-- Banner Starts Here -->
-    <div class="banner header-text">
-      <div class="owl-banner owl-carousel">
-        <div class="banner-item-01">
-          <div class="text-content">
-            <h4>Best Offer</h4>
-            <h2>New Arrivals On Sale</h2>
-          </div>
-        </div>
-        <div class="banner-item-02">
-          <div class="text-content">
-            <h4>Flash Deals</h4>
-            <h2>Get your best products</h2>
-          </div>
-        </div>
-        <div class="banner-item-03">
-          <div class="text-content">
-            <h4>Last Minute</h4>
-            <h2>Grab last minute deals</h2>
+    <div class="page-heading contact-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>contact us</h4>
+              <h2>let’s get in touch</h2>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Banner Ends Here -->
 
 
-    @include('user.product')
-
-    <div class="best-features">
+    <div class="find-us">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>About Mademoiselle</h2>
+              <h2>Our Location on Maps</h2>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-8">
+            <div id="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2516.229608733672!2d4.358212412257836!3d50.90096745470545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c259f51e7f0b%3A0xc0e911ec9df53028!2sMademoiselle!5e0!3m2!1sfr!2sbe!4v1704142498080!5m2!1sfr!2sbe" width="100%" height="330px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-4">
             <div class="left-content">
-              <h4>Looking for the best products?</h4>
-              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent"></a>Welcome to 'Mademoiselle' where style meets sophistication.<a rel="nofollow" href="contact.html"> Contact us</a> for more info.</p>
-              <ul class="featured-list">
-                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                <li><a href="#">Consectetur an adipisicing elit</a></li>
-                <li><a href="#">It aquecorporis nulla aspernatur</a></li>
-                <li><a href="#">Corporis, omnis doloremque</a></li>
-                <li><a href="#">Non cum id reprehenderit</a></li>
+              <h4>About Mademoiselle</h4>
+              <p>
+                Welcome to 'Mademoiselle,' where style meets sophistication. Explore our curated collection of chic dresses designed for the modern woman. From casual elegance to show-stopping gowns, each piece at 'Mademoiselle' is a celebration of timeless fashion. Elevate your wardrobe with us – discover the perfect dress that complements your unique style and exudes confidence. Your journey to refined fashion starts here, at 'Mademoiselle.'
+                <br><br>Open from : <br> 
+                Tuesday to Saturday from 10:00AM - 06:00PM
+              </p>
+              <ul class="social-icons">
+                <li><a href="https://www.instagram.com/mademoiselle.bxl/"><i class="fa fa-instagram"></i></a></li>
               </ul>
-              <a href="about.html" class="filled-button">Read More</a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="right-image">
-              <img src="assets/images/feature-image.jpg" alt="">
             </div>
           </div>
         </div>
       </div>
     </div>
 
-
-    <div class="call-to-action">
+    
+    <div class="send-message">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="inner-content">
-              <div class="row">
-                <div class="col-md-8">
-                  <h4>Creative &amp; Unique <em>Mademoiselle</em> Products</h4>
-                </div>
-                <div class="col-md-4">
-                  <a href="#" class="filled-button">Purchase Now</a>
-                </div>
-              </div>
+            <div class="section-heading">
+              <h2>Send us a Message</h2>
             </div>
+          </div>
+          <div class="col-md-8">
+            <div class="contact-form">
+              <form id="contact" action="{{route('contactform.store')}}" method="post">
+                @csrf
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="email" type="text" class="form-control" id="email" placeholder="E-Mail Address" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <ul class="accordion">
+              <li>
+                  <a>Contact Form</a>
+                  <div class="content">
+                      <p>For any inquiries or assistance, feel free to reach out to us using the contact form below. <br><br></p>
+                  </div>
+              </li>
+              <li>
+                  <a>Come to the store</a>
+                  <div class="content">
+                      <p>If you prefer a direct interaction, our store is at your service. Drop by 'Mademoiselle' for any in-person assistance with your bought dresses.<br><br>'Mademoiselle' welcomes customers to our store for a warm, in-person discussion about any concerns or questions regarding their dress purchases.</p>
+                  </div>
+              </li>
+              <li>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -184,7 +211,7 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="row">
           <div class="col-md-12">
             <div class="inner-content">
-              <p>Copyright &copy; 2024 Mademoiselle, Ltd.
+              <p>Copyright &copy; 2024 Mademoiselle., Ltd.
             
             - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
             </div>

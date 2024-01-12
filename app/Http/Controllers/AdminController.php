@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contactform;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -110,5 +111,11 @@ class AdminController extends Controller
         $order->save();
 
         return redirect()->back();
+    }
+
+    public function showcontactform()
+    {
+        $contactform=Contactform::all();
+        return view('admin.showcontactform', compact('contactform'));
     }
 }
