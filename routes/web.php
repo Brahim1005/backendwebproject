@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ContactformController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +28,30 @@ Route::middleware([
 });
 
 
+// ====================== HOMECONTROLLER ROUTES ======================
+
+
 route::get('/homeadmin', [HomeController::class, 'homeadmin']);
 
 route::get('/', [HomeController::class, 'home']);
+
+route::get('/search', [HomeController::class, 'search']);
+
+route::post('/addcart/{id}', [HomeController::class, 'addcart']);
+
+route::get('/showcart', [HomeController::class, 'showcart']);
+
+route::get('/delete/{id}', [HomeController::class, 'deletecart']);
+
+route::post('/order', [HomeController::class, 'confirmorder']);
+
+
+// ====================== ADMINCONTROLLER ROUTES ======================
+
+
+route::get('/showorder', [AdminController::class, 'showorder']);
+
+route::get('/updatestatus/{id}', [AdminController::class, 'updatestatus']);
 
 route::get('/product', [AdminController::class, 'product']);
 
@@ -43,16 +65,14 @@ route::get('/updateproductview/{id}', [AdminController::class, 'updateproductvie
 
 route::post('/updateproduct/{id}', [AdminController::class, 'updateproduct']);
 
-route::get('/search', [HomeController::class, 'search']);
+route::get('/showcontactform', [AdminController::class, 'showcontactform']);
 
-route::post('/addcart/{id}', [HomeController::class, 'addcart']);
 
-route::get('/showcart', [HomeController::class, 'showcart']);
+// ====================== CONTACTFORMCONTROLLER ROUTES ======================
 
-route::get('/delete/{id}', [HomeController::class, 'deletecart']);
 
-route::post('/order', [HomeController::class, 'confirmorder']);
+route::get('/contactform', [ContactformController::class, 'index'])->name('contactform.index');
 
-route::get('/showorder', [AdminController::class, 'showorder']);
+route::post('/contactform', [ContactformController::class, 'store'])->name('contactform.store');
 
-route::get('/updatestatus/{id}', [AdminController::class, 'updatestatus']);
+
