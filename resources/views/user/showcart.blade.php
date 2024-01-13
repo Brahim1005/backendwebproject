@@ -61,7 +61,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <a class="nav-link" href="{{url('faq')}}">FAQ Page</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="{{url('about')}}">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a>
