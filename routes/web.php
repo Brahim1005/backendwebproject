@@ -67,6 +67,8 @@ route::post('/updateproduct/{id}', [AdminController::class, 'updateproduct']);
 
 route::get('/showcontactform', [AdminController::class, 'showcontactform']);
 
+route::get('/deletecontactform/{id}', [AdminController::class, 'deletecontactform']);
+
 
 // ====================== CONTACTFORMCONTROLLER ROUTES ======================
 

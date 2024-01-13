@@ -118,4 +118,11 @@ class AdminController extends Controller
         $contactform=Contactform::all();
         return view('admin.showcontactform', compact('contactform'));
     }
+
+    public function deletecontactform($id)
+    {
+        $contactform=Contactform::find($id);
+        $contactform->delete();
+        return redirect()->back()->with('message', 'Product updated succesfully');
+    }
 }
