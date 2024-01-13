@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactformController;
+use App\Http\Controllers\FaqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,6 +70,14 @@ route::get('/showcontactform', [AdminController::class, 'showcontactform']);
 
 route::get('/deletecontactform/{id}', [AdminController::class, 'deletecontactform']);
 
+route::get('/showfaq', [AdminController::class, 'showfaq']);
+
+route::get('/updatefaqview/{id}', [AdminController::class, 'updatefaqview']);
+
+route::post('/updatefaq/{id}', [AdminController::class, 'updatefaq']);
+
+route::get('/deletefaq/{id}', [AdminController::class, 'deletefaq']);
+
 
 // ====================== CONTACTFORMCONTROLLER ROUTES ======================
 
@@ -76,5 +85,15 @@ route::get('/deletecontactform/{id}', [AdminController::class, 'deletecontactfor
 route::get('/contactform', [ContactformController::class, 'index'])->name('contactform.index');
 
 route::post('/contactform', [ContactformController::class, 'store'])->name('contactform.store');
+
+
+// ====================== FAQCONTROLLER ROUTES ======================
+
+route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
+
+route::post('/faq', [FaqController::class, 'store'])->name('faq.store');
+
+route::get('/faq', [FaqController::class, 'showfaq']);
+
 
 

@@ -14,11 +14,16 @@ class ContactformController extends Controller
 {
     public function index()
     {
-        $user=auth()->user();
 
-        $cart=cart::where('phone', $user->phone)->get();
-
-        $count=cart::where('phone',$user->phone)->count();
+        $user = auth()->user();
+        $cart = [];
+        $count = 0;
+     
+        if ($user) {
+            $cart = Cart::where('phone', $user->phone)->get();
+            $count = Cart::where('phone', $user->phone)->count();
+        }
+        
         return view('user.contactform', compact('count', 'cart'));
     }
 

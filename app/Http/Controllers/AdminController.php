@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contactform;
+use App\Models\Faq;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -11,6 +12,8 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
+
+    // Show product if user has 0 usertype, if 1 show admin panel
     public function product()
     {        
         if (auth::id()) 
@@ -31,6 +34,7 @@ class AdminController extends Controller
         }
     }
 
+    // Upload products in admin panel (shown on home page)
     public function uploadproduct(Request $request)
     {
         $data=new product;
@@ -52,6 +56,7 @@ class AdminController extends Controller
         
     }
 
+    // Show products in admin panel (admin can update and delete products)
     public function showproduct()
     {
         $data=Product::all();
@@ -94,7 +99,10 @@ class AdminController extends Controller
         return redirect()->back()->with('message', 'Product updated succesfully');
 
     }
+    // End of showing products in Admine panel
 
+
+    // Show orders on admin panel
     public function showorder()
     {
 
@@ -102,6 +110,7 @@ class AdminController extends Controller
         return view('admin.showorder', compact('order'));
     }
 
+    // Admin can update the status of an order
     public function updatestatus($id)
     {
         $order=order::find($id);
@@ -113,6 +122,7 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    // Show contact forms on admin panel (admin can delete forms)
     public function showcontactform()
     {
         $contactform=Contactform::all();
@@ -125,4 +135,40 @@ class AdminController extends Controller
         $contactform->delete();
         return redirect()->back()->with('message', 'Product updated succesfully');
     }
+    // End of contact forms in admin panel
+
+
+    // Show FAQ on admin panel
+    public function showfaq()
+    {
+        $faq=Faq::all();
+        return view('admin.showfaq', compact('faq'));
+    }
+
+    public function deletefaq($id)
+    {
+        $faq=Faq::find($id);
+        $faq->delete();
+        return redirect()->back()->with('message', 'Product updated succesfully');
+    }
+
+    public function updatefaqview($id)
+    {
+        $faq=Faq::find($id);
+        return view('admin.updatefaqview', compact('faq'));
+    }
+
+    public function updatefaq(Request $request, $id)
+    {
+        $faq=Faq::find($id);
+
+        $faq->question=$request->question;
+        $faq->answer=$request->answer;
+
+        $faq->save();
+
+        return redirect()->back()->with('message', 'Product updated succesfully');
+
+    }
+
 }
