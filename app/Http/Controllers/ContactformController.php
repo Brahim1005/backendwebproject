@@ -4,12 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Models\Contactform;
 use Illuminate\Http\Request;
+use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Cart;
+
+
 
 class ContactformController extends Controller
 {
     public function index()
     {
-        return view('user.contactform');
+        $user=auth()->user();
+
+        $cart=cart::where('phone', $user->phone)->get();
+
+        $count=cart::where('phone',$user->phone)->count();
+        return view('user.contactform', compact('count', 'cart'));
     }
 
     public function store(Request $request)
