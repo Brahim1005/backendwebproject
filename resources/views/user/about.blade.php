@@ -10,49 +10,22 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
 
-    <title>FAQ Page</title>
+    <title>About Page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--
+
+TemplateMo 546 Sixteen Clothing
+
+https://templatemo.com/tm-546-sixteen-clothing
+
+-->
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-sixteen.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-
-    <style>
-        .show-questions {
-            border-collapse: collapse;
-            margin: 25px 0;
-            font-size: 0.9em;
-            font-family: sans-serif;
-            min-width: 400px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .show-questions thead tr {
-            background-color: #9C9696;
-            color: #ffffff;
-            text-align: left;
-        }
-
-        .show-questions th,
-        .show-questions td {
-            padding: 12px 15px;
-        }
-
-        .show-questions tbody tr {
-            border-bottom: 1px solid #dddddd;
-        }
-
-        .show-questions tbody tr:nth-of-type(even) {
-            background-color: #f3f3f3;
-        }
-
-        .show-questions tbody tr:last-of-type {
-            border-bottom: 2px solid #9C9696;
-        }
-    </style>
 
 </head>
 
@@ -86,10 +59,10 @@
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{url('faq')}}">FAQ Page</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="{{url('about')}}">About Us</a>
                         </li>
                         <li class="nav-item">
@@ -128,75 +101,87 @@
     </header>
 
     <!-- Page Content -->
-    <div class="page-heading contact-heading header-text">
+    <div class="page-heading about-heading header-text">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-content">
-                        <h4>FAQ Page</h4>
-                        <h2 >Most asked questions</h2>
+                        <h4>about us</h4>
+                        <h2>Read Me</h2>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="send-question">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading">
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="faq-form">
-                        <form id="contact" action="" method="post">
-                            @csrf
-                            <div class="row">
-                                <div class="col-lg-5 col-md-8 col-sm-15">
-                                    <fieldset>
-                                        <input name="question" type="text" class="form-control" id="question" placeholder="Question" required="">
-                                        <br>
-                                    </fieldset>
-                                </div>
-                                <!-- <div class="col-lg-5 col-md-8 col-sm-15">
-                                    <fieldset>
-                                        <input name="answer" type="text" class="form-control" id="answer" placeholder="Answer" required="">
-                                        <br>
-                                    </fieldset>
-                                </div> -->
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <button type="submit" id="form-submit" class="filled-button">Send Question</button>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h1 align="center" style="padding-top: 15px; font-weight:bold; font-size:x-large;">Short Information about the website</h1>
+    <br>
+    <br>
 
-    <div align="center" class="show-questions">
-        <table>
-            <thead>
-                <tr align="center">
-                    <td>Asked Questions</td>
-                    <td>Answer</td>
-                </tr>
-            </thead>
+    <h3 style="padding-left: 20px; font-weight:bold;">Algemene informatie</h3>
+    <p style="padding-left: 20px;">Ik heb gekozen om een website te maken voor een small business van mijn schoonzus. Ze heeft een winkel waar ze
+        jurken verkoopt. 
+        Ik heb dus een website gemaakt daarvoor.
+    </p>
+    <br>
 
-            @foreach($faq as $faqs)
-            <tbody>
-                <tr align="center">
-                    <td>{{$faqs->question}}</td>
-                    <td>{{$faqs->answer}}</td>
-                </tr>
-            </tbody>
-            @endforeach
-        </table>
-    </div>
+    <h3 style="padding-left: 20px; font-weight:bold;">Minimum Requirements</h3>
+    <p style="padding-left: 20px;">
+       -Login system :
+       <br>
+        - Users can log in ✅ <br>
+        - Visitors can create a new account ✅<br>
+        - Users may or may not be an administrator ✅<br>
+        - Only an administrator can promote another user to administrator status (or create a new user that is an admin) -> Can promote via DataBase by changing usertype ✅<br>
+        <br>
+       - Profile pagina : <br>
+        - Each user has their own profile page ✅ <br>
+        - A user can edit their own user data ✅ <br>
+        <br>
+       - Latest news : <br>
+        - Admins can add, edit, and delete news products ✅ <br>
+        - Every visitor of the website can view the news products ✅ <br>
+        - These news items have at least the following: <br>
+        - Title ✅<br>
+        - Cover image ✅<br>
+        - Content ✅<br>
+       - FAQ page : <br>
+       <br>
+        - There is a list of questions and answers ✅ <br>
+        - Admins can add, edit, and delete FAQ question and answer pairs ✅ <br>
+        - Every visitor of the website can view the FAQ page ✅ <br>
+        <br>
+       - Contact page : <br>
+        - Visitors can fill out a contact form ✅<br>
+        - The content of submitted forms will be sent to the administrators ✅ <br>
+    </p>
+    <br>
+
+    <h3 style="padding-left: 20px; font-weight:bold;">Extra Features</h3>
+    <p style="padding-left: 20px;">
+        - Shopping system (user have a cart and can add products in it) ✅ <br>
+        - In the contact page, users can see the real location of the store on Google Maps ✅ <br>
+        - You can search products via the searchbar ✅ <br>
+        - Users can pose questions that might be added to the FAQ ✅ <br>
+        - Admins can add answers to the posed FAQ questions through the admin panel ✅ <br>
+        - There is also a 2-factor authentification that is working (activable on profile user) ✅
+    </p>
+
+    <br>
+    <br>
+    <h3 style="padding-left: 20px; font-weight:bold;">List of sources</h3>
+    <p style="padding-left: 20px;">
+        Ik heb 2 templates gebruikt in dit project : Een template voor de design van de website en een template voor de admin panel 
+        <br>
+        Eerste template (Website) -> https://templatemo.com/tm-546-sixteen-clothing
+        <br>
+        Tweede template (Admin-panel) -> https://github.com/BootstrapDash/corona-free-dark-bootstrap-admin-template
+        <br>
+        Deze video heeft mij ook heel veel geholpen bij het integreren van deze templates -> https://youtu.be/gMzf49j9Qm0?si=YWGDJippCobq7Xks
+        <br>
+        <p style="padding-left: 20px; font-weight:bold;">Ter info: Deze templates zijn gewoon gebruikt om een design te geven!</p>
+        <br>
+    </p>
 
 
     <footer>
