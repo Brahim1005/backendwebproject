@@ -3,7 +3,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>Latest Products</h2>
+              <h2>Products</h2>
               <a href="/">view all products <i class="fa fa-angle-right"></i></a>
 
               <form action="{{url('search')}}" method="get" class="form-inline" style="float: right; padding: 10px;">
