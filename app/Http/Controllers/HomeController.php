@@ -54,6 +54,14 @@ class HomeController extends Controller
     public function search(Request $request)
     {
         $search=$request->search;
+        $user = auth()->user();
+        $cart = [];
+        $count = 0;
+     
+        if ($user) {
+            $cart = Cart::where('phone', $user->phone)->get();
+            $count = Cart::where('phone', $user->phone)->count();
+        }
 
         if ($search=='') 
         {
@@ -63,7 +71,7 @@ class HomeController extends Controller
 
         $data=Product::where('title', 'Like', '%'.$search.'%')->get();
 
-        return view('user.home', compact('data'));
+        return view('user.home', compact('data', 'count', 'cart'));
 
     }
 

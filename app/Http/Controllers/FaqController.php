@@ -36,8 +36,17 @@ class FaqController extends Controller
 
     public function showfaq()
     {
+        $user = auth()->user();
+        $cart = [];
+        $count = 0;
+     
+        if ($user) {
+            $cart = Cart::where('phone', $user->phone)->get();
+            $count = Cart::where('phone', $user->phone)->count();
+        }
+        
         $faq=Faq::all();
-        return view('user.faq', compact('faq'));
+        return view('user.faq', compact('faq','count', 'cart'));
     }
 
 }

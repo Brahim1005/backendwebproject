@@ -9,6 +9,9 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
+
     <title>Contact Page</title>
 
     <!-- Bootstrap core CSS -->
@@ -101,8 +104,8 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="row">
           <div class="col-md-12">
             <div class="text-content">
-              <h4>contact us</h4>
-              <h2>let’s get in touch</h2>
+              <!-- <h4>contact us</h4> -->
+              <!-- <h2>let’s get in touch</h2> -->
             </div>
           </div>
         </div>
@@ -212,8 +215,6 @@ https://templatemo.com/tm-546-sixteen-clothing
           <div class="col-md-12">
             <div class="inner-content">
               <p>Copyright &copy; 2024 Mademoiselle., Ltd.
-            
-            - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
             </div>
           </div>
         </div>

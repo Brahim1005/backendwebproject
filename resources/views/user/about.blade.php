@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
 
     <title>About Page</title>
 
@@ -106,8 +108,6 @@ https://templatemo.com/tm-546-sixteen-clothing
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-content">
-                        <h4>about us</h4>
-                        <h2>Read Me</h2>
                     </div>
                 </div>
             </div>
@@ -132,7 +132,7 @@ https://templatemo.com/tm-546-sixteen-clothing
         - Users can log in ✅ <br>
         - Visitors can create a new account ✅<br>
         - Users may or may not be an administrator ✅<br>
-        - Only an administrator can promote another user to administrator status (or create a new user that is an admin) -> Can promote via DataBase by changing usertype ✅<br>
+        - Only an administrator can promote another user to administrator status (or create a new user that is an admin) -> Can promote a user to admin via DataBase by changing usertype in DataBase ✅<br>
         <br>
        - Profile pagina : <br>
         - Each user has their own profile page ✅ <br>
@@ -164,14 +164,15 @@ https://templatemo.com/tm-546-sixteen-clothing
         - You can search products via the searchbar ✅ <br>
         - Users can pose questions that might be added to the FAQ ✅ <br>
         - Admins can add answers to the posed FAQ questions through the admin panel ✅ <br>
-        - There is also a 2-factor authentification that is working (activable on profile user) ✅
+        - There is also a 2-factor authentification that is working (activable on user profile ) ✅
+        - User can also delete his own account (on user profile) ✅
     </p>
 
     <br>
     <br>
     <h3 style="padding-left: 20px; font-weight:bold;">List of sources</h3>
     <p style="padding-left: 20px;">
-        Ik heb 2 templates gebruikt in dit project : Een template voor de design van de website en een template voor de admin panel 
+        Ik heb 2 templates gebruikt in dit project : Een template voor de design van de website en een bootstrap template voor de admin panel 
         <br>
         Eerste template (Website) -> https://templatemo.com/tm-546-sixteen-clothing
         <br>
@@ -179,8 +180,9 @@ https://templatemo.com/tm-546-sixteen-clothing
         <br>
         Deze video heeft mij ook heel veel geholpen bij het integreren van deze templates -> https://youtu.be/gMzf49j9Qm0?si=YWGDJippCobq7Xks
         <br>
-        <p style="padding-left: 20px; font-weight:bold;">Ter info: Deze templates zijn gewoon gebruikt om een design te geven!</p>
+        Gebruikte image voor de banner van de contact page -> https://tampabaycateringco.com/contact-banner/
         <br>
+        Gebruikte image voor de banner van de about page -> https://bulldogjob.com/readme/how-to-write-a-good-readme-for-your-github-project
     </p>
 
 
@@ -190,9 +192,6 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <div class="col-md-12">
                     <div class="inner-content">
                         <p>Copyright &copy; 2024 Mademoiselle., Ltd.
-
-                            - Design: <a rel="nofollow noopener" href="https://templatemo.com"
-                                target="_blank">TemplateMo</a></p>
                     </div>
                 </div>
             </div>
