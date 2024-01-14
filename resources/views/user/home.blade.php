@@ -104,20 +104,6 @@ https://templatemo.com/tm-546-sixteen-clothing
       <div class="owl-banner owl-carousel">
         <div class="banner-item-01">
           <div class="text-content">
-            <h4>Best Offer</h4>
-            <h2>New Arrivals On Sale</h2>
-          </div>
-        </div>
-        <div class="banner-item-02">
-          <div class="text-content">
-            <h4>Flash Deals</h4>
-            <h2>Get your best products</h2>
-          </div>
-        </div>
-        <div class="banner-item-03">
-          <div class="text-content">
-            <h4>Last Minute</h4>
-            <h2>Grab last minute deals</h2>
           </div>
         </div>
       </div>
@@ -138,20 +124,18 @@ https://templatemo.com/tm-546-sixteen-clothing
           <div class="col-md-6">
             <div class="left-content">
               <h4>Looking for the best products?</h4>
-              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent"></a>Welcome to 'Mademoiselle' where style meets sophistication.<a rel="nofollow" href="contact.html"> Contact us</a> for more info.</p>
+              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent"></a>Welcome to 'Mademoiselle' where style meets sophistication.<a rel="nofollow" href="{{url('contactform')}}"> Contact us</a> for more info.</p>
+              <p style="font-weight: bold;">
+              <br>Open from : <br> 
+                Tuesday to Saturday from 10:00AM - 06:00PM
+              </p>
               <ul class="featured-list">
-                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                <li><a href="#">Consectetur an adipisicing elit</a></li>
-                <li><a href="#">It aquecorporis nulla aspernatur</a></li>
-                <li><a href="#">Corporis, omnis doloremque</a></li>
-                <li><a href="#">Non cum id reprehenderit</a></li>
               </ul>
-              <a href="about.html" class="filled-button">Read More</a>
+              <a href="{{url('about')}}" class="filled-button">Read More</a>
             </div>
           </div>
           <div class="col-md-6">
             <div class="right-image">
-              <img src="assets/images/feature-image.jpg" alt="">
             </div>
           </div>
         </div>
@@ -185,8 +169,6 @@ https://templatemo.com/tm-546-sixteen-clothing
           <div class="col-md-12">
             <div class="inner-content">
               <p>Copyright &copy; 2024 Mademoiselle, Ltd.
-            
-            - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
             </div>
           </div>
         </div>

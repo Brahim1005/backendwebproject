@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
 
     <title>FAQ Page</title>
 
@@ -128,13 +130,13 @@
     </header>
 
     <!-- Page Content -->
-    <div class="page-heading contact-heading header-text">
+    <div class="page-heading faq-heading header-text">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-content">
                         <h4>FAQ Page</h4>
-                        <h2 >Most asked questions</h2>
+                        <h2 style="color: black;">Most asked questions</h2>
                     </div>
                 </div>
             </div>
@@ -159,15 +161,9 @@
                                         <br>
                                     </fieldset>
                                 </div>
-                                <!-- <div class="col-lg-5 col-md-8 col-sm-15">
-                                    <fieldset>
-                                        <input name="answer" type="text" class="form-control" id="answer" placeholder="Answer" required="">
-                                        <br>
-                                    </fieldset>
-                                </div> -->
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <button type="submit" id="form-submit" class="filled-button">Send Question</button>
+                                        <button type="submit" id="form-submit" style="background-color: #78CA68; color:black" class="btn btn-success">Send Question</button>
                                     </fieldset>
                                 </div>
                             </div>
@@ -205,9 +201,6 @@
                 <div class="col-md-12">
                     <div class="inner-content">
                         <p>Copyright &copy; 2024 Mademoiselle., Ltd.
-
-                            - Design: <a rel="nofollow noopener" href="https://templatemo.com"
-                                target="_blank">TemplateMo</a></p>
                     </div>
                 </div>
             </div>
