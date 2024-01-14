@@ -183,7 +183,13 @@ https://templatemo.com/tm-546-sixteen-clothing
         Gebruikte image voor de banner van de contact page -> https://tampabaycateringco.com/contact-banner/
         <br>
         Gebruikte image voor de banner van de about page -> https://bulldogjob.com/readme/how-to-write-a-good-readme-for-your-github-project
+        <br>
+        Kleine tutorial dat ik gebruikte voor de login and registratie feature -> https://onlinewebtutorblog.com/laravel-ui-login-register-email-verification-in-laravel-8/
+        <br>
+        <br>
     </p>
+
+    <p style="padding-left: 20px; font-weight:bold;">This is the link to my Github Repo -> https://github.com/Brahim1005/backendwebproject.git (I also send a invite to kevin.felix@ehb.be email :p)</p>
 
 
     <footer>
