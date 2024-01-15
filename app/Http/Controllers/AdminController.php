@@ -167,7 +167,7 @@ class AdminController extends Controller
 
         $faq->save();
 
-        return redirect()->back()->with('message', 'Product updated succesfully');
+        return redirect()->back()->with('message', 'Question Answered succesfully');
 
     }
 
