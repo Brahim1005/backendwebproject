@@ -188,6 +188,10 @@ https://templatemo.com/tm-546-sixteen-clothing
         <br>
         Laravel Documentatie voor Controllers -> https://laravel.com/docs/10.x/controllers
         <br>
+        Video dat mij geholpen heeft bij het maken van Seeders -> https://www.youtube.com/watch?v=0CKyI1P36uQ
+        <br>
+        Laravel documentatie voor het randomize van getallen -> https://www.php.net/manual/en/function.rand.php
+        <br>
         <br>
     </p>
 
