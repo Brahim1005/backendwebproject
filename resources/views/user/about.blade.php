@@ -186,6 +186,8 @@ https://templatemo.com/tm-546-sixteen-clothing
         <br>
         Kleine tutorial dat ik gebruikte voor de login and registratie feature -> https://onlinewebtutorblog.com/laravel-ui-login-register-email-verification-in-laravel-8/
         <br>
+        Laravel Documentatie voor Controllers -> https://laravel.com/docs/10.x/controllers
+        <br>
         <br>
     </p>
 
