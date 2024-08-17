@@ -6,9 +6,12 @@ use App\Models\Contactform;
 use App\Models\Faq;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Symfony\Contracts\Service\Attribute\Required;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+
 
 class AdminController extends Controller
 {
@@ -170,5 +173,64 @@ class AdminController extends Controller
         return redirect()->back()->with('message', 'Question Answered succesfully');
 
     }
+
+    // Manage Users (promote user to admin)
+
+ // Show list of users with options to promote, delete, and create a new user
+ public function manageUsers()
+ {
+     $users = User::all();
+     return view('admin.manageUsers', compact('users'));
+ }
+
+ // Promote a user to admin
+ public function promoteUser($id)
+ {
+     $user = User::find($id);
+
+     if ($user && Auth::user()->usertype == '1') {
+         $user->usertype = '1';
+         $user->save();
+         return redirect()->back()->with('message', 'User promoted to admin successfully');
+     }
+
+     return redirect()->back()->with('error', 'Operation failed');
+ }
+
+ // Delete a user
+ public function deleteUser($id)
+ {
+     $user = User::find($id);
+
+     if ($user && Auth::user()->usertype == '1') {
+         $user->delete();
+         return redirect()->back()->with('message', 'User deleted successfully');
+     }
+
+     return redirect()->back()->with('error', 'Operation failed');
+ }
+
+ // Create a new user with admin privileges
+ public function createUser(Request $request)
+ {
+     $request->validate([
+         'name' => 'required|string|max:255',
+         'email' => 'required|string|email|max:255|unique:users',
+         'password' => 'required|string|min:8|confirmed',
+     ]);
+
+     if (Auth::user()->usertype == '1') {
+         $user = new User;
+         $user->name = $request->name;
+         $user->email = $request->email;
+         $user->password = Hash::make($request->password);
+         $user->usertype = '1'; // Set the new user as admin
+         $user->save();
+
+         return redirect()->back()->with('message', 'Admin user created successfully');
+     }
+
+     return redirect()->back()->with('error', 'Operation failed');
+ }
 
 }

@@ -132,7 +132,6 @@ https://templatemo.com/tm-546-sixteen-clothing
         - Users can log in ✅ <br>
         - Visitors can create a new account ✅<br>
         - Users may or may not be an administrator ✅<br>
-        - Only an administrator can promote another user to administrator status (or create a new user that is an admin) -> Can promote a user to admin via DataBase by changing usertype in DataBase ✅<br>
         <br>
        - Profile pagina : <br>
         - Each user has their own profile page ✅ <br>
@@ -197,6 +196,13 @@ https://templatemo.com/tm-546-sixteen-clothing
 
     <p style="padding-left: 20px; font-weight:bold;">This is the link to my Github Repo -> https://github.com/Brahim1005/backendwebproject.git (I also send a invite to kevin.felix@ehb.be email :p)</p>
 
+    <br>
+    <h3 style="padding-left: 20px; font-weight:bold;">Update</h3>
+    <p style="padding-left: 20px;">
+    Only an administrator can promote another user to administrator status (or create a new user that is an admin)    
+    </p>
+    
+    
 
     <footer>
         <div class="container">

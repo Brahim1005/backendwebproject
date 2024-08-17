@@ -80,6 +80,15 @@ route::post('/updatefaq/{id}', [AdminController::class, 'updatefaq']);
 
 route::get('/deletefaq/{id}', [AdminController::class, 'deletefaq']);
 
+Route::get('/manageUsers', [AdminController::class, 'manageUsers'])->middleware('auth');
+
+Route::get('/promoteUser/{id}', [AdminController::class, 'promoteUser'])->middleware('auth');
+
+Route::get('/deleteUser/{id}', [AdminController::class, 'deleteUser'])->middleware('auth');
+
+Route::post('/createUser', [AdminController::class, 'createUser'])->middleware('auth');
+
+
 
 // ====================== CONTACTFORMCONTROLLER ROUTES ======================
 
