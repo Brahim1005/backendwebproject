@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\FaqCategory;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class FaqCategoriesSeeder extends Seeder
 {
@@ -14,12 +14,10 @@ class FaqCategoriesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('faq_categories')->insert([
-            ['name' => 'General'],
-            ['name' => 'Shipping'],
-            ['name' => 'Returns'],
-            ['name' => 'Payments'],
-            ['name' => 'Technical Support'],
-        ]);
+        FaqCategory::create(['name' => 'General']);
+        FaqCategory::create(['name' => 'Shipping']);
+        FaqCategory::create(['name' => 'Returns']);
+        FaqCategory::create(['name' => 'Payments']);
+        FaqCategory::create(['name' => 'Technical Support']);
     }
 }

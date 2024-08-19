@@ -199,7 +199,15 @@ https://templatemo.com/tm-546-sixteen-clothing
     <br>
     <h3 style="padding-left: 20px; font-weight:bold;">Update</h3>
     <p style="padding-left: 20px;">
-    Only an administrator can promote another user to administrator status (or create a new user that is an admin)    
+    Only an administrator can promote another user to administrator status (or create a new user that is an admin) ✅   
+    <br>
+    FAQ has now categories ✅
+    <br>
+    Admins can add, edit, and delete FAQ question and answer pairs ✅
+    <br>
+    Admins can add, edit, and delete FAQ categories ✅
+    <br>
+    AdminControllers no long in one file ✅
     </p>
     
     

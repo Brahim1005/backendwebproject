@@ -16,8 +16,10 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             ProductSeeder::class,
             ContactformSeeder::class,
+            FaqCategoriesSeeder::class,
             FaqSeeder::class,
-            OrderSeeder::class
+            OrderSeeder::class,
+
         ]);
 
     }
