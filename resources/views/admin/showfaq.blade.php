@@ -52,6 +52,7 @@
                 <tr align="center">
                     <td>Asked Questions</td>
                     <td>Answer</td>
+                    <td>Add new Question</td>
                     <td>Update/Answer the question</td>
                     <td>Delete Question</td>
                 </tr>
@@ -62,6 +63,7 @@
                 <tr align="center">
                     <td>{{$faqs->question}}</td>
                     <td>{{$faqs->answer}}</td>
+                    <td><a class="btn btn-success" href="{{url('createfaqview')}}">Add New FAQ</a></td>
                     <td><a class="btn btn-primary" href="{{url('updatefaqview', $faqs->id)}}">Update / Answer the question</a></td>
                     <td><a class="btn btn-danger" onclick="return confirm('Are you sure ?')" href="{{url('deletefaq', $faqs->id)}}">Delete</a></td>
 

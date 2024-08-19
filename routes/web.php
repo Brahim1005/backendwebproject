@@ -5,6 +5,13 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactformController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\FaqAdminController;
+use App\Http\Controllers\Admin\FaqCategoryController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\ContactFormAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,54 +56,74 @@ route::post('/order', [HomeController::class, 'confirmorder']);
 route::get('/about', [HomeController::class, 'about']);
 
 
-// ====================== ADMINCONTROLLER ROUTES ======================
+// ====================== ADMIN ORDERCONTROLLER ROUTES ======================
 
 
-route::get('/showorder', [AdminController::class, 'showorder']);
+route::get('/showorder', [OrderController::class, 'showorder']);
 
-route::get('/updatestatus/{id}', [AdminController::class, 'updatestatus']);
+route::get('/updatestatus/{id}', [OrderController::class, 'updatestatus']);
 
-route::get('/product', [AdminController::class, 'product']);
+// ====================== ADMIN PRODUCTCONTROLLER ROUTES ======================
 
-route::post('/uploadproduct', [AdminController::class, 'uploadproduct']);
+route::get('/product', [ProductController::class, 'product']);
 
-route::get('/showproduct', [AdminController::class, 'showproduct']);
+route::post('/uploadproduct', [ProductController::class, 'uploadproduct']);
 
-route::get('/deleteproduct/{id}', [AdminController::class, 'deleteproduct']);
+route::get('/showproduct', [ProductController::class, 'showproduct']);
 
-route::get('/updateproductview/{id}', [AdminController::class, 'updateproductview']);
+route::get('/deleteproduct/{id}', [ProductController::class, 'deleteproduct']);
 
-route::post('/updateproduct/{id}', [AdminController::class, 'updateproduct']);
+route::get('/updateproductview/{id}', [ProductController::class, 'updateproductview']);
 
-route::get('/showcontactform', [AdminController::class, 'showcontactform']);
+route::post('/updateproduct/{id}', [ProductController::class, 'updateproduct']);
 
-route::get('/deletecontactform/{id}', [AdminController::class, 'deletecontactform']);
+// ====================== ADMIN FAQCONTROLLER ROUTES ======================
 
-route::get('/showfaq', [AdminController::class, 'showfaq']);
+route::get('/showfaq', [FaqAdminController::class, 'showfaq']);
 
-route::get('/updatefaqview/{id}', [AdminController::class, 'updatefaqview']);
+route::get('/createfaqview', [FaqAdminController::class, 'createfaqview']);
 
-route::post('/updatefaq/{id}', [AdminController::class, 'updatefaq']);
+route::post('/storefaq', [FaqAdminController::class, 'storefaq']);
 
-route::get('/deletefaq/{id}', [AdminController::class, 'deletefaq']);
+route::get('/updatefaqview/{id}', [FaqAdminController::class, 'updatefaqview']);
 
-Route::get('/manageUsers', [AdminController::class, 'manageUsers'])->middleware('auth');
+route::post('/updatefaq/{id}', [FaqAdminController::class, 'updatefaq']);
 
-Route::get('/promoteUser/{id}', [AdminController::class, 'promoteUser'])->middleware('auth');
+route::get('/deletefaq/{id}', [FaqAdminController::class, 'deletefaq']);
 
-Route::get('/deleteUser/{id}', [AdminController::class, 'deleteUser'])->middleware('auth');
+// ====================== ADMIN FAQCATEGORYCONTROLLER ROUTES ======================
 
-Route::post('/createUser', [AdminController::class, 'createUser'])->middleware('auth');
+Route::get('/faqCategory', [FaqCategoryController::class, 'showFaqCategories'])->middleware('auth');
 
+Route::post('/storeFaqCategory', [FaqCategoryController::class, 'storeFaqCategory'])->middleware('auth');
 
+Route::post('/updateFaqCategory/{id}', [FaqCategoryController::class, 'updateFaqCategory'])->middleware('auth');
+
+Route::get('/updatefaqcategoryview/{id}', [FaqCategoryController::class, 'updatefaqcategoryview'])->name('updatefaqcategoryview');
+
+Route::get('/deleteFaqCategory/{id}', [FaqCategoryController::class, 'deleteFaqCategory'])->middleware('auth');
+
+// ====================== ADMIN USERCONTROLLER ROUTES ======================
+
+Route::get('/manageUsers', [UserController::class, 'manageUsers'])->middleware('auth');
+
+Route::get('/promoteUser/{id}', [UserController::class, 'promoteUser'])->middleware('auth');
+
+Route::get('/deleteUser/{id}', [UserController::class, 'deleteUser'])->middleware('auth');
+
+Route::post('/createUser', [UserController::class, 'createUser'])->middleware('auth');
+
+// ====================== ADMIN CONTACTFORMCONTROLLER ROUTES ======================
+
+route::get('/showcontactform', [ContactFormAdminController::class, 'showcontactform']);
+
+route::get('/deletecontactform/{id}', [ContactFormAdminController::class, 'deletecontactform']);
 
 // ====================== CONTACTFORMCONTROLLER ROUTES ======================
-
 
 route::get('/contactform', [ContactformController::class, 'index'])->name('contactform.index');
 
 route::post('/contactform', [ContactformController::class, 'store'])->name('contactform.store');
-
 
 // ====================== FAQCONTROLLER ROUTES ======================
 
@@ -106,5 +133,12 @@ route::post('/faq', [FaqController::class, 'store'])->name('faq.store');
 
 route::get('/faq', [FaqController::class, 'showfaq']);
 
+// ====================== USER PROFILES ROUTES ======================
+
+Route::get('/profile/{id}', [ProfileController::class, 'show'])->name('profile.show');
+
+// ====================== USER SEARCH ROUTE ======================
+
+Route::get('/user/search', [ProfileController::class, 'search'])->name('user.search');
 
 
